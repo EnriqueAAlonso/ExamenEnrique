@@ -1,0 +1,14 @@
+C:\Users\henry\source\repos\ExamenEnrique\ExamenEnrique\obj\Debug\ExamenEnrique.csprojAssemblyReference.cache
+C:\Users\henry\source\repos\ExamenEnrique\ExamenEnrique\obj\Debug\ExamenEnrique.Form1.resources
+C:\Users\henry\source\repos\ExamenEnrique\ExamenEnrique\obj\Debug\ExamenEnrique.Properties.Resources.resources
+C:\Users\henry\source\repos\ExamenEnrique\ExamenEnrique\obj\Debug\ExamenEnrique.UserControls.Login.resources
+C:\Users\henry\source\repos\ExamenEnrique\ExamenEnrique\obj\Debug\ExamenEnrique.csproj.GenerateResource.cache
+C:\Users\henry\source\repos\ExamenEnrique\ExamenEnrique\obj\Debug\ExamenEnrique.csproj.CoreCompileInputs.cache
+C:\Users\henry\source\repos\ExamenEnrique\ExamenEnrique\bin\Debug\ExamenEnrique.exe.config
+C:\Users\henry\source\repos\ExamenEnrique\ExamenEnrique\bin\Debug\ExamenEnrique.exe
+C:\Users\henry\source\repos\ExamenEnrique\ExamenEnrique\bin\Debug\ExamenEnrique.pdb
+C:\Users\henry\source\repos\ExamenEnrique\ExamenEnrique\bin\Debug\RestSharp.dll
+C:\Users\henry\source\repos\ExamenEnrique\ExamenEnrique\bin\Debug\RestSharp.xml
+C:\Users\henry\source\repos\ExamenEnrique\ExamenEnrique\obj\Debug\ExamenEnrique.csproj.CopyComplete
+C:\Users\henry\source\repos\ExamenEnrique\ExamenEnrique\obj\Debug\ExamenEnrique.exe
+C:\Users\henry\source\repos\ExamenEnrique\ExamenEnrique\obj\Debug\ExamenEnrique.pdb
