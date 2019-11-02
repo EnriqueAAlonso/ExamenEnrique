@@ -77,7 +77,57 @@ namespace ExamenEnrique.Classes
 
 
         }
-            
+        public bool CheckCity(string email, string city)
+        {
+            var result = false;
+            try
+            {
+                if (_client.Open())
+                {
+                    var command = new SqlCommand
+                    {
+                        Connection = _client.connection,
+                        CommandText = "checkCity",
+                        CommandType = CommandType.StoredProcedure
+                    };
+
+                    var par1 = new SqlParameter("@user", SqlDbType.NVarChar)
+                    {
+                        Direction = ParameterDirection.Input,
+                        Value = email
+                    };
+                    var par2= new SqlParameter("@city", SqlDbType.NVarChar)
+                    {
+                        Direction = ParameterDirection.Input,
+                        Value = city
+                    };
+
+                    command.Parameters.Add(par1);
+                    command.Parameters.Add(par2);
+                    command.ExecuteNonQuery();
+
+                    var dataReader = command.ExecuteReader();
+                    while (dataReader.Read())
+                    {
+                        
+                        return true;
+                    }
+                }
+            }
+            catch
+            {
+                // ignored
+            }
+            finally
+            {
+                _client.Close();
+            }
+
+            return false;
+
+
+        }
+
         public bool AddUser(User user)
         {
             var result = false;
@@ -188,6 +238,55 @@ namespace ExamenEnrique.Classes
 
             return null;
         }
+        public void DeleteCity(User u, string city)
+        {
+            var result = false;
+            try
+            {
+                if (_client.Open())
+                {
+                    var command = new SqlCommand
+                    {
+                        Connection = _client.connection,
+                        CommandText = "removeCity",
+                        CommandType = CommandType.StoredProcedure
+                    };
+
+                    var par1 = new SqlParameter("@user", SqlDbType.NVarChar)
+                    {
+                        Direction = ParameterDirection.Input,
+                        Value = u.getMail()
+                    };
+
+                    var par2 = new SqlParameter("@city", SqlDbType.NVarChar)
+                    {
+                        Direction = ParameterDirection.Input,
+                        Value = city
+                    };
+                    
+
+
+                    command.Parameters.Add(par1);
+                    command.Parameters.Add(par2);
+
+                    command.ExecuteNonQuery();
+
+                   
+
+
+                }
+            }
+            catch (Exception)
+            {
+                
+            }
+            finally
+            {
+                _client.Close();
+            }
+
+            
+        }
 
         public bool addCity(User u, string city)
         {
@@ -256,6 +355,12 @@ namespace ExamenEnrique.Classes
                         CommandText = "getcity",
                         CommandType = CommandType.StoredProcedure
                     };
+                    var par1 = new SqlParameter("@user", SqlDbType.NVarChar)
+                    {
+                        Direction = ParameterDirection.Input,
+                        Value = user
+                    };
+                    command.Parameters.Add(par1);
                     var dataReader = command.ExecuteReader();
                     while (dataReader.Read())
                     {

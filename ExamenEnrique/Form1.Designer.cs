@@ -32,6 +32,7 @@
             this.login1 = new ExamenEnrique.UserControls.Login();
             this.selectCity1 = new ExamenEnrique.UserControls.SelectCity();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // login1
@@ -56,13 +57,24 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(994, 27);
+            this.button1.Location = new System.Drawing.Point(1047, 30);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 57);
+            this.button1.Size = new System.Drawing.Size(130, 57);
             this.button1.TabIndex = 2;
             this.button1.Text = "Add City";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(1070, 581);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(87, 47);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Undo";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
@@ -71,6 +83,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1216, 766);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.selectCity1);
             this.Controls.Add(this.login1);
@@ -87,6 +100,7 @@
         private UserControls.Login login1;
         private UserControls.SelectCity selectCity1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

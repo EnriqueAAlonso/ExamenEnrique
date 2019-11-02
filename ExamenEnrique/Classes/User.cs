@@ -21,8 +21,18 @@ namespace ExamenEnrique.Classes
         {
             return _password;
         }
+        //Prototype clone
+        public User Clone()
+        {
+            var usr= new User { _mail = this._mail, _password = this._password, _cities = new List<string>() };
+            foreach (var element in _cities)
+            {
+                usr._cities.Add(element);
+            }
 
-        
+            return usr;
+        }
+
 
     }
 }

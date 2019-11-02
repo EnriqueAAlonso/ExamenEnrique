@@ -37,8 +37,14 @@ namespace ExamenEnrique.Classes
 
         public string addCity(string city, User u)
         {
-             return _ds.addCity(u,city) ? "City Added correctly" : "Failed adding city ";
-          
+            if(!_ds.CheckCity(u._mail,city)) return _ds.addCity(u,city) ? "City Added correctly" : "Failed adding city ";
+            else return "City already on the userbase";
+
+        }
+
+        public void deletecity(string city, User u)
+        {
+            _ds.DeleteCity(u,city);
         }
 
         public bool loginUser(User u)
