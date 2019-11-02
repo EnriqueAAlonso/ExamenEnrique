@@ -16,3 +16,5 @@ C:\Users\henry\source\repos\ExamenEnrique\ExamenEnrique\obj\Debug\ExamenEnrique.
 C:\Users\henry\source\repos\ExamenEnrique\ExamenEnrique\obj\Debug\ExamenEnrique.UserControls.Details.resources
 C:\Users\henry\source\repos\ExamenEnrique\ExamenEnrique\obj\Debug\ExamenEnrique.UserControls.DetailedCity.resources
 C:\Users\henry\source\repos\ExamenEnrique\ExamenEnrique\obj\Debug\ExamenEnrique.UserControls.Small_Forecast.resources
+C:\Users\henry\source\repos\ExamenEnrique\ExamenEnrique\obj\Debug\ExamenEnrique.UserControls.Cities_window.resources
+C:\Users\henry\source\repos\ExamenEnrique\ExamenEnrique\obj\Debug\ExamenEnrique.csprojAssemblyReference.cache

@@ -61,5 +61,17 @@ namespace ExamenEnrique.UserControls
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            owner.exitDetails(label1.Text, false);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            owner.exitDetails(label1.Text, true);
+        }
     }
 }

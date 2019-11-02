@@ -34,6 +34,8 @@
             this.detailedCity1 = new ExamenEnrique.UserControls.DetailedCity();
             this.selectCity1 = new ExamenEnrique.UserControls.SelectCity();
             this.login1 = new ExamenEnrique.UserControls.Login();
+            this.cities_window1 = new ExamenEnrique.UserControls.Cities_window();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -85,6 +87,25 @@
             this.login1.Size = new System.Drawing.Size(979, 463);
             this.login1.TabIndex = 0;
             // 
+            // cities_window1
+            // 
+            this.cities_window1.BackColor = System.Drawing.Color.White;
+            this.cities_window1.Location = new System.Drawing.Point(112, 12);
+            this.cities_window1.Name = "cities_window1";
+            this.cities_window1.Size = new System.Drawing.Size(938, 658);
+            this.cities_window1.TabIndex = 5;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(1056, 644);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(124, 50);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "Logout";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -92,6 +113,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1216, 766);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.cities_window1);
             this.Controls.Add(this.detailedCity1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -112,6 +135,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private UserControls.DetailedCity detailedCity1;
+        private UserControls.Cities_window cities_window1;
+        private System.Windows.Forms.Button button3;
     }
 }
 

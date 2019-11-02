@@ -69,6 +69,12 @@
     <Compile Include="ProxyServices\IProxy.cs" />
     <Compile Include="ProxyServices\Proxy.cs" />
     <Compile Include="ProxyServices\Weathers.cs" />
+    <Compile Include="UserControls\Cities window.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Cities window.Designer.cs">
+      <DependentUpon>Cities window.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\DetailedCity.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -118,6 +124,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\Cities window.resx">
+      <DependentUpon>Cities window.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\DetailedCity.resx">
       <DependentUpon>DetailedCity.cs</DependentUpon>
     </EmbeddedResource>

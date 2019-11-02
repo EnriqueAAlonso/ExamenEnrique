@@ -61,7 +61,7 @@ namespace ExamenEnrique.UserControls
                         string s = us.AddUser(u);
                         MessageBox.Show(s);
                         if (s == "User registered correctly") valid = true;
-                        owner.notifyOwner(this, u);
+                        if(valid)owner.notifyOwner(this, u);
                     }
 
                     

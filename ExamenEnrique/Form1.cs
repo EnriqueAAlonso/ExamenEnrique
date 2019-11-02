@@ -21,7 +21,7 @@ namespace ExamenEnrique
         Caretaker caretaker=new Caretaker();
         Originator og=new Originator();
         static string connectionString = "data source=COMPENSATOR\\SQLEXPRESS02;initial catalog=examen; integrated security = True";
-        User currentUser=new User();
+        private User currentUser = new User();
         UserService uservice=new UserService(connectionString);
 
         public Form1()
@@ -32,12 +32,39 @@ namespace ExamenEnrique
             login1.setOwner(this);
             selectCity1.setOwner(this);
             detailedCity1.setOwner(this);
-            detailedCity1.setCity("Mexico City");
-
+            cities_window1.setOwner(this);
+            cities_window1.Hide();
+            detailedCity1.Hide();
             login1.updateCSTR(connectionString);
             selectCity1.Hide();
             button1.Hide();
             button2.Hide();
+            button3.Hide();
+        }
+
+        public void getDetails(string city)
+        {
+            detailedCity1.setCity(city);
+            cities_window1.Hide();
+            detailedCity1.Show();
+        }
+
+        public void exitDetails(string city, bool delete)
+        {
+            if (delete)
+            {
+                og.setState(currentUser.Clone());
+                caretaker.AddMemento(og.SaveToMemento());
+                if (caretaker.Size() > 0) button2.Show();
+                else button2.Hide();
+                currentUser._cities.Remove(city);
+                uservice.deletecity(city, currentUser);
+                cities_window1.updateList(uservice.getcities(currentUser));
+
+            }
+
+            cities_window1.Show();
+            detailedCity1.Hide();
         }
 
         public void notifyOwner(UserControl uc, User ucUser)
@@ -47,7 +74,9 @@ namespace ExamenEnrique
             if (currentUser != null) currentUser._cities = uservice.getcities(currentUser);
             button1.Show();
             login1.Reset();
-            detailedCity1.Show();
+            cities_window1.updateList(uservice.getcities(currentUser));
+            cities_window1.Show();
+            button3.Show();
         }
 
         public void undo()
@@ -68,15 +97,16 @@ namespace ExamenEnrique
                     uservice.deletecity(city,currentUser);
                 }
             }
-
+            cities_window1.updateList(currentUser._cities);
 
             if (caretaker.Size()>0)button2.Show();
             else button2.Hide();
 
         }
 
-        public void increaseCities(string txt)
+        public bool increaseCities(string txt)
         {
+            bool ret = false;
             if (!currentUser._cities.Contains(txt))
             {
                 og.setState(currentUser.Clone());
@@ -85,16 +115,22 @@ namespace ExamenEnrique
                 else button2.Hide();
                 currentUser._cities.Add(txt);
                 MessageBox.Show(uservice.addCity(txt, currentUser));
+                cities_window1.updateList(currentUser._cities);
+                cities_window1.Show();
+                ret = true;
             }
             else
             {
                 MessageBox.Show("City is already registered by this user");
-                selectCity1.Show();
+                return false;
             }
             button1.Show();
+            return ret;
+
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            cities_window1.Hide();
             selectCity1.Show();
             button1.Hide();
         }
@@ -106,7 +142,43 @@ namespace ExamenEnrique
 
         private void logout()
         {
-            //Update user service so it gets the new lists, if something got deleted, it should delete it
+            caretaker = new Caretaker();
+            og = new Originator();
+            login1.Show();
+            login1.setOwner(this);
+            selectCity1.setOwner(this);
+            detailedCity1.setOwner(this);
+            cities_window1.setOwner(this);
+            cities_window1.Hide();
+            detailedCity1.Hide();
+            login1.updateCSTR(connectionString);
+            selectCity1.Hide();
+            button1.Hide();
+            button2.Hide();
+            button3.Hide();
+
+
+            var lists = uservice.getcities(currentUser);
+            foreach (string city in currentUser._cities)
+            {
+                uservice.addCity(city, currentUser);
+            }
+
+            foreach (string city in lists)
+            {
+                if (!currentUser._cities.Contains(city))
+                {
+                    uservice.deletecity(city, currentUser);
+                }
+            }
+            currentUser = new User();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            logout();
+
+
         }
     }
 }
