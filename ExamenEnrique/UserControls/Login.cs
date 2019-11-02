@@ -52,10 +52,19 @@ namespace ExamenEnrique.UserControls
             {
                 if (IsValidEmail(u._mail))
                 {
-                    string s = us.AddUser(u);
-                    MessageBox.Show(s);
-                    if (s == "User registered correctly") valid = true;
-                    owner.notifyOwner(this, u);
+                    if (u._password.Length < 6)
+                    {
+                        MessageBox.Show("Please use a longer password");
+                    }
+                    else
+                    {
+                        string s = us.AddUser(u);
+                        MessageBox.Show(s);
+                        if (s == "User registered correctly") valid = true;
+                        owner.notifyOwner(this, u);
+                    }
+
+                    
 
                 }
                 else

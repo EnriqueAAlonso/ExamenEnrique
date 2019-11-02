@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\AdapterForecastWeather.cs" />
     <Compile Include="Classes\City.cs" />
     <Compile Include="Classes\SQLClient.cs" />
     <Compile Include="Classes\User.cs" />
@@ -68,6 +69,12 @@
     <Compile Include="ProxyServices\IProxy.cs" />
     <Compile Include="ProxyServices\Proxy.cs" />
     <Compile Include="ProxyServices\Weathers.cs" />
+    <Compile Include="UserControls\DetailedCity.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DetailedCity.Designer.cs">
+      <DependentUpon>DetailedCity.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Details.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -92,6 +99,12 @@
     <Compile Include="UserControls\SelectCity.Designer.cs">
       <DependentUpon>SelectCity.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Small Forecast.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Small Forecast.Designer.cs">
+      <DependentUpon>Small Forecast.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -105,6 +118,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\DetailedCity.resx">
+      <DependentUpon>DetailedCity.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Details.resx">
       <DependentUpon>Details.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\SelectCity.resx">
       <DependentUpon>SelectCity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Small Forecast.resx">
+      <DependentUpon>Small Forecast.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

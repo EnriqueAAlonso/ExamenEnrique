@@ -68,6 +68,13 @@ namespace ExamenEnrique.UserControls
         private void button1_Click(object sender, EventArgs e)
         {
             owner.increaseCities(comboBox1.Text);
+
+            this.Hide();
+        }
+
+        private void panel1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

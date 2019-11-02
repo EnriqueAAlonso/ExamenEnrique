@@ -23,14 +23,17 @@ namespace ExamenEnrique
         static string connectionString = "data source=COMPENSATOR\\SQLEXPRESS02;initial catalog=examen; integrated security = True";
         User currentUser=new User();
         UserService uservice=new UserService(connectionString);
+
         public Form1()
         {
             
             InitializeComponent();
-            
             login1.Show();
             login1.setOwner(this);
             selectCity1.setOwner(this);
+            detailedCity1.setOwner(this);
+            detailedCity1.setCity("Mexico City");
+
             login1.updateCSTR(connectionString);
             selectCity1.Hide();
             button1.Hide();
@@ -43,7 +46,8 @@ namespace ExamenEnrique
             currentUser = ucUser;
             if (currentUser != null) currentUser._cities = uservice.getcities(currentUser);
             button1.Show();
-
+            login1.Reset();
+            detailedCity1.Show();
         }
 
         public void undo()
@@ -82,10 +86,17 @@ namespace ExamenEnrique
                 currentUser._cities.Add(txt);
                 MessageBox.Show(uservice.addCity(txt, currentUser));
             }
+            else
+            {
+                MessageBox.Show("City is already registered by this user");
+                selectCity1.Show();
+            }
+            button1.Show();
         }
         private void button1_Click(object sender, EventArgs e)
         {
             selectCity1.Show();
+            button1.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -29,30 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.login1 = new ExamenEnrique.UserControls.Login();
-            this.selectCity1 = new ExamenEnrique.UserControls.SelectCity();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.detailedCity1 = new ExamenEnrique.UserControls.DetailedCity();
+            this.selectCity1 = new ExamenEnrique.UserControls.SelectCity();
+            this.login1 = new ExamenEnrique.UserControls.Login();
             this.SuspendLayout();
-            // 
-            // login1
-            // 
-            this.login1.AutoSize = true;
-            this.login1.BackColor = System.Drawing.Color.Transparent;
-            this.login1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.login1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.login1.Location = new System.Drawing.Point(179, 93);
-            this.login1.Name = "login1";
-            this.login1.Size = new System.Drawing.Size(979, 463);
-            this.login1.TabIndex = 0;
-            // 
-            // selectCity1
-            // 
-            this.selectCity1.BackColor = System.Drawing.Color.Transparent;
-            this.selectCity1.Location = new System.Drawing.Point(195, 12);
-            this.selectCity1.Name = "selectCity1";
-            this.selectCity1.Size = new System.Drawing.Size(890, 632);
-            this.selectCity1.TabIndex = 1;
             // 
             // button1
             // 
@@ -76,6 +58,33 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // detailedCity1
+            // 
+            this.detailedCity1.BackColor = System.Drawing.Color.Transparent;
+            this.detailedCity1.Location = new System.Drawing.Point(12, 12);
+            this.detailedCity1.Name = "detailedCity1";
+            this.detailedCity1.Size = new System.Drawing.Size(1199, 626);
+            this.detailedCity1.TabIndex = 4;
+            // 
+            // selectCity1
+            // 
+            this.selectCity1.BackColor = System.Drawing.Color.Transparent;
+            this.selectCity1.Location = new System.Drawing.Point(195, 12);
+            this.selectCity1.Name = "selectCity1";
+            this.selectCity1.Size = new System.Drawing.Size(890, 632);
+            this.selectCity1.TabIndex = 1;
+            // 
+            // login1
+            // 
+            this.login1.AutoSize = true;
+            this.login1.BackColor = System.Drawing.Color.Transparent;
+            this.login1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.login1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.login1.Location = new System.Drawing.Point(179, 93);
+            this.login1.Name = "login1";
+            this.login1.Size = new System.Drawing.Size(979, 463);
+            this.login1.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -83,6 +92,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1216, 766);
+            this.Controls.Add(this.detailedCity1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.selectCity1);
@@ -101,6 +111,7 @@
         private UserControls.SelectCity selectCity1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private UserControls.DetailedCity detailedCity1;
     }
 }
 

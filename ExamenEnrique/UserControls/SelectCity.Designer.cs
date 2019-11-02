@@ -72,12 +72,12 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(246, 370);
             this.panel1.TabIndex = 2;
-            
             // 
             // SelectCity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
