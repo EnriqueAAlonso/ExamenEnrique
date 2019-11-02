@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.detailedCity1 = new ExamenEnrique.UserControls.DetailedCity();
@@ -89,7 +88,7 @@
             // 
             // cities_window1
             // 
-            this.cities_window1.BackColor = System.Drawing.Color.White;
+            this.cities_window1.BackColor = System.Drawing.Color.Transparent;
             this.cities_window1.Location = new System.Drawing.Point(112, 12);
             this.cities_window1.Name = "cities_window1";
             this.cities_window1.Size = new System.Drawing.Size(938, 658);
@@ -110,7 +109,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::ExamenEnrique.Properties.Resources.fade2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1216, 766);
             this.Controls.Add(this.button3);
@@ -120,6 +119,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.selectCity1);
             this.Controls.Add(this.login1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Form1";
             this.Text = "Form1";

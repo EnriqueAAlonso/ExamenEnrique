@@ -38,12 +38,12 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.small_Forecast5 = new ExamenEnrique.UserControls.Small_Forecast();
             this.small_Forecast4 = new ExamenEnrique.UserControls.Small_Forecast();
             this.small_Forecast3 = new ExamenEnrique.UserControls.Small_Forecast();
             this.small_Forecast2 = new ExamenEnrique.UserControls.Small_Forecast();
             this.small_Forecast1 = new ExamenEnrique.UserControls.Small_Forecast();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -61,7 +61,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(30, 3);
             this.panel1.Name = "panel1";
@@ -71,7 +71,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Impact", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(103, 293);
             this.label2.Name = "label2";
@@ -83,7 +83,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Impact", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(49, 343);
             this.label3.Name = "label3";
@@ -94,7 +94,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Impact", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(49, 379);
             this.label4.Name = "label4";
@@ -105,7 +105,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Impact", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(210, 343);
             this.label5.Name = "label5";
@@ -116,7 +116,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.White;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Impact", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(210, 379);
             this.label6.Name = "label6";
@@ -135,10 +135,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Location = new System.Drawing.Point(58, 15);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(278, 278);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -153,46 +154,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // small_Forecast5
-            // 
-            this.small_Forecast5.BackColor = System.Drawing.Color.White;
-            this.small_Forecast5.Location = new System.Drawing.Point(993, 249);
-            this.small_Forecast5.Name = "small_Forecast5";
-            this.small_Forecast5.Size = new System.Drawing.Size(158, 245);
-            this.small_Forecast5.TabIndex = 16;
-            // 
-            // small_Forecast4
-            // 
-            this.small_Forecast4.BackColor = System.Drawing.Color.White;
-            this.small_Forecast4.Location = new System.Drawing.Point(829, 249);
-            this.small_Forecast4.Name = "small_Forecast4";
-            this.small_Forecast4.Size = new System.Drawing.Size(177, 245);
-            this.small_Forecast4.TabIndex = 15;
-            // 
-            // small_Forecast3
-            // 
-            this.small_Forecast3.BackColor = System.Drawing.Color.White;
-            this.small_Forecast3.Location = new System.Drawing.Point(681, 249);
-            this.small_Forecast3.Name = "small_Forecast3";
-            this.small_Forecast3.Size = new System.Drawing.Size(158, 245);
-            this.small_Forecast3.TabIndex = 14;
-            // 
-            // small_Forecast2
-            // 
-            this.small_Forecast2.BackColor = System.Drawing.Color.White;
-            this.small_Forecast2.Location = new System.Drawing.Point(529, 249);
-            this.small_Forecast2.Name = "small_Forecast2";
-            this.small_Forecast2.Size = new System.Drawing.Size(158, 245);
-            this.small_Forecast2.TabIndex = 13;
-            // 
-            // small_Forecast1
-            // 
-            this.small_Forecast1.BackColor = System.Drawing.Color.White;
-            this.small_Forecast1.Location = new System.Drawing.Point(375, 249);
-            this.small_Forecast1.Name = "small_Forecast1";
-            this.small_Forecast1.Size = new System.Drawing.Size(158, 245);
-            this.small_Forecast1.TabIndex = 12;
-            // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -204,11 +165,51 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // small_Forecast5
+            // 
+            this.small_Forecast5.BackColor = System.Drawing.Color.Transparent;
+            this.small_Forecast5.Location = new System.Drawing.Point(993, 249);
+            this.small_Forecast5.Name = "small_Forecast5";
+            this.small_Forecast5.Size = new System.Drawing.Size(158, 245);
+            this.small_Forecast5.TabIndex = 16;
+            // 
+            // small_Forecast4
+            // 
+            this.small_Forecast4.BackColor = System.Drawing.Color.Transparent;
+            this.small_Forecast4.Location = new System.Drawing.Point(829, 249);
+            this.small_Forecast4.Name = "small_Forecast4";
+            this.small_Forecast4.Size = new System.Drawing.Size(177, 245);
+            this.small_Forecast4.TabIndex = 15;
+            // 
+            // small_Forecast3
+            // 
+            this.small_Forecast3.BackColor = System.Drawing.Color.Transparent;
+            this.small_Forecast3.Location = new System.Drawing.Point(681, 249);
+            this.small_Forecast3.Name = "small_Forecast3";
+            this.small_Forecast3.Size = new System.Drawing.Size(158, 245);
+            this.small_Forecast3.TabIndex = 14;
+            // 
+            // small_Forecast2
+            // 
+            this.small_Forecast2.BackColor = System.Drawing.Color.Transparent;
+            this.small_Forecast2.Location = new System.Drawing.Point(529, 249);
+            this.small_Forecast2.Name = "small_Forecast2";
+            this.small_Forecast2.Size = new System.Drawing.Size(158, 245);
+            this.small_Forecast2.TabIndex = 13;
+            // 
+            // small_Forecast1
+            // 
+            this.small_Forecast1.BackColor = System.Drawing.Color.Transparent;
+            this.small_Forecast1.Location = new System.Drawing.Point(375, 249);
+            this.small_Forecast1.Name = "small_Forecast1";
+            this.small_Forecast1.Size = new System.Drawing.Size(158, 245);
+            this.small_Forecast1.TabIndex = 12;
+            // 
             // DetailedCity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.small_Forecast5);

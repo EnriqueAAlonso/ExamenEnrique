@@ -20,7 +20,6 @@ namespace ExamenEnrique.UserControls
         public Login()
         {
             InitializeComponent();
-            pictureBox1.Image = ExamenEnrique.Properties.Resources.mountain;
 
         }
 
@@ -102,7 +101,6 @@ namespace ExamenEnrique.UserControls
             label4.Text = "Not a user?";
             label3.Text = "Log-in";
             button1.Text = "Log-in";
-            pictureBox1.Image = ExamenEnrique.Properties.Resources.mountain;
         }
 
         public void updateCSTR(string cStr)
@@ -119,8 +117,8 @@ namespace ExamenEnrique.UserControls
                 label4.Text = "Already a user?";
                 label3.Text = "Sign up";
                 button1.Text = "Register";
-                pictureBox1.Image = ExamenEnrique.Properties.Resources.ice;
                 register = true;
+                textBox2.Clear();
             }
             else
             {
@@ -129,7 +127,7 @@ namespace ExamenEnrique.UserControls
                 label4.Text = "Not a user?";
                 label3.Text = "Log-in";
                 button1.Text = "Log-in";
-                pictureBox1.Image = ExamenEnrique.Properties.Resources.mountain;
+                textBox2.Clear();
             }
 
 

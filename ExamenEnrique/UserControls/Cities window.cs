@@ -21,6 +21,8 @@ namespace ExamenEnrique.UserControls
         {
             
             InitializeComponent();
+            numericUpDown1.Minimum = 1;
+            label1.Hide();
         }
         public void setOwner(Form1 o)
         {
@@ -48,9 +50,19 @@ namespace ExamenEnrique.UserControls
                 limit = 0;
             }
 
-            if (limit >= 1)
+            cities = new List<string>();
+            foreach (var loc in locations)
             {
-                panel1.updateWeather(cities[0]);
+                cities.Add(loc);
+            }
+
+            int val = Convert.ToInt32(numericUpDown1.Value);
+            count = cities.Count;
+
+            if (count >= (3 * val) - 2)
+            {
+                numericUpDown1.Minimum = 1;
+                panel1.updateWeather(cities[(val * 3) - 3]);
                 panel1.Show();
                 button1.Show();
             }
@@ -59,31 +71,34 @@ namespace ExamenEnrique.UserControls
                 panel1.Hide();
                 button1.Hide();
             }
-            if (limit >= 2)
+            if (count >= (3 * val) - 1)
             {
-                panel2.updateWeather(cities[1]);
+                panel2.updateWeather(cities[(3 * val) - 2]);
                 panel2.Show();
                 button2.Show();
             }
             else
             {
-                button2.Hide();
                 panel2.Hide();
+                button2.Hide();
             }
-            if (limit >= 3)
+
+            if (count >= (3 * val))
             {
-                panel3.updateWeather(cities[2]);
+                panel3.updateWeather(cities[(3 * val) - 1]);
                 panel3.Show();
                 button3.Show();
             }
             else
             {
-                button3.Hide();
                 panel3.Hide();
+                button3.Hide();
             }
-            
-            
-            
+            if (count==0) label1.Show();
+            else label1.Hide();
+
+
+
 
 
 
@@ -136,6 +151,7 @@ namespace ExamenEnrique.UserControls
         {
             this.Hide();
             int val = Convert.ToInt32(numericUpDown1.Value);
+            if (val == 0) val = 1;
             owner.getDetails(cities[(val * 3) - 3]);
 
         }
@@ -144,6 +160,7 @@ namespace ExamenEnrique.UserControls
         {
             this.Hide();
             int val = Convert.ToInt32(numericUpDown1.Value);
+            if (val == 0) val = 1;
             owner.getDetails(cities[(val * 3) - 2]);
         }
 
@@ -151,6 +168,7 @@ namespace ExamenEnrique.UserControls
         {
             this.Hide();
             int val = Convert.ToInt32(numericUpDown1.Value);
+            if (val == 0) val = 1;
             owner.getDetails(cities[(val * 3) - 1]);
         }
     }

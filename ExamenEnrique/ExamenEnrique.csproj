@@ -166,6 +166,8 @@
     <None Include="Images\Snowflake.png" />
     <None Include="Images\medium.png" />
     <None Include="Images\fire.png" />
+    <None Include="Images\fade2.png" />
+    <None Include="Images\fade.jpg" />
     <Content Include="SQL Script\InitDb.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -128,6 +128,13 @@ namespace ExamenEnrique
             return ret;
 
         }
+
+        public void cancel()
+        {
+            cities_window1.Show();
+            button1.Show();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             cities_window1.Hide();
