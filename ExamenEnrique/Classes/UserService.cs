@@ -35,6 +35,12 @@ namespace ExamenEnrique.Classes
             }
         }
 
+        public string addCity(string city, User u)
+        {
+             return _ds.addCity(u,city) ? "City Added correctly" : "Failed adding city ";
+          
+        }
+
         public bool loginUser(User u)
         {
             if (_ds.loginUser(u._mail, u._password) != null) return true;

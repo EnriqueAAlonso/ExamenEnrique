@@ -12,3 +12,6 @@ C:\Users\henry\source\repos\ExamenEnrique\ExamenEnrique\bin\Debug\RestSharp.xml
 C:\Users\henry\source\repos\ExamenEnrique\ExamenEnrique\obj\Debug\ExamenEnrique.csproj.CopyComplete
 C:\Users\henry\source\repos\ExamenEnrique\ExamenEnrique\obj\Debug\ExamenEnrique.exe
 C:\Users\henry\source\repos\ExamenEnrique\ExamenEnrique\obj\Debug\ExamenEnrique.pdb
+C:\Users\henry\source\repos\ExamenEnrique\ExamenEnrique\obj\Debug\ExamenEnrique.UserControls.Panel.resources
+C:\Users\henry\source\repos\ExamenEnrique\ExamenEnrique\obj\Debug\ExamenEnrique.UserControls.SelectCity.resources
+C:\Users\henry\source\repos\ExamenEnrique\ExamenEnrique\obj\Debug\ExamenEnrique.UserControls.Details.resources

@@ -12,6 +12,7 @@ namespace ExamenEnrique.UserControls
 {
     public partial class Login : UserControl
     {
+        private Form1 owner;
         private string cString;
         private UserService us;
         private bool register = false;
@@ -19,6 +20,7 @@ namespace ExamenEnrique.UserControls
         public Login()
         {
             InitializeComponent();
+            pictureBox1.Image = ExamenEnrique.Properties.Resources.mountain;
 
         }
 
@@ -35,6 +37,7 @@ namespace ExamenEnrique.UserControls
                     {
                         MessageBox.Show("Login successful");
                         valid = true;
+                        owner.notifyOwner(this, u);
                     }
                 
                     else MessageBox.Show("Login failed");
@@ -52,6 +55,7 @@ namespace ExamenEnrique.UserControls
                     string s = us.AddUser(u);
                     MessageBox.Show(s);
                     if (s == "User registered correctly") valid = true;
+                    owner.notifyOwner(this, u);
 
                 }
                 else
@@ -74,11 +78,22 @@ namespace ExamenEnrique.UserControls
                 return false;
             }
         }
+
+        public void setOwner(Form1 o)
+        {
+            owner = o;
+        }
+
         public void Reset()
         {
             textBox1.Text = "";
             textBox2.Text = "";
             register = false;
+            label5.Text = "Register here";
+            label4.Text = "Not a user?";
+            label3.Text = "Log-in";
+            button1.Text = "Log-in";
+            pictureBox1.Image = ExamenEnrique.Properties.Resources.mountain;
         }
 
         public void updateCSTR(string cStr)
@@ -93,7 +108,9 @@ namespace ExamenEnrique.UserControls
             {
                 label5.Text = "Log-in here";
                 label4.Text = "Already a user?";
-
+                label3.Text = "Sign up";
+                button1.Text = "Register";
+                pictureBox1.Image = ExamenEnrique.Properties.Resources.ice;
                 register = true;
             }
             else
@@ -101,9 +118,12 @@ namespace ExamenEnrique.UserControls
                 register = false;
                 label5.Text = "Register here";
                 label4.Text = "Not a user?";
+                label3.Text = "Log-in";
+                button1.Text = "Log-in";
+                pictureBox1.Image = ExamenEnrique.Properties.Resources.mountain;
             }
 
-            
+
         }
     }
 }

@@ -189,6 +189,60 @@ namespace ExamenEnrique.Classes
             return null;
         }
 
+        public bool addCity(User u, string city)
+        {
+            var result = false;
+            try
+            {
+                if (_client.Open())
+                {
+                    var command = new SqlCommand
+                    {
+                        Connection = _client.connection,
+                        CommandText = "addcity",
+                        CommandType = CommandType.StoredProcedure
+                    };
+
+                    var par1 = new SqlParameter("@email", SqlDbType.NVarChar)
+                    {
+                        Direction = ParameterDirection.Input,
+                        Value = u.getMail()
+                    };
+
+                    var par2 = new SqlParameter("@city", SqlDbType.NVarChar)
+                    {
+                        Direction = ParameterDirection.Input,
+                        Value = city
+                    };
+                    var par3 = new SqlParameter("@haserror", SqlDbType.Bit)
+                    {
+                        Direction = ParameterDirection.Output
+                    };
+
+
+                    command.Parameters.Add(par1);
+                    command.Parameters.Add(par2);
+                    command.Parameters.Add(par3);
+
+                    command.ExecuteNonQuery();
+
+                    result = !Convert.ToBoolean(command.Parameters["@haserror"].Value.ToString());
+
+
+                }
+            }
+            catch (Exception)
+            {
+                result = false;
+            }
+            finally
+            {
+                _client.Close();
+            }
+
+            return result;
+        }
+
         public List<string> getCities(string user)
         {
             var result = new List<string>();

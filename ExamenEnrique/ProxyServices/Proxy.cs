@@ -7,10 +7,12 @@ using RestSharp;
 using RestSharp.Extensions;
 namespace ExamenEnrique.ProxyServices
 {
-    //Codigo usado en la clase de Proxy que vimos en clase cuando debiamos hacer forecasts
+    
 
-    class Proxy : IProxy
+    //Codigo usado en la clase de Proxy que vimos en clase cuando debiamos hacer forecasts
+    public class Proxy : IProxy
     {
+        
         private RestClient _client;
         private string _appid = "b1e34d4d55487b41db609a28e5854900";
         private string _units = "metric";
@@ -18,7 +20,7 @@ namespace ExamenEnrique.ProxyServices
         {
             _client = new RestClient("http://api.openweathermap.org/data/2.5/");
         }
-
+        
         public WeatherObject weather(string ciudad)
         {
             var request = new RestRequest($"weather?q={ciudad}&APPID={_appid}&units={_units}");
